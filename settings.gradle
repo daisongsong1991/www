@@ -1,0 +1,6 @@
+rootProject.name = 'www'
+include 'app'
+findProject(':app')?.name = 'www'
+rootProject.name = 'www'
+rootProject.name = 'www'
+
