@@ -27,6 +27,14 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>encode</filter-name>
+        <filter-class>com.daisongsong.accountbook.filter.EncodeFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>encode</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
     <servlet>
         <servlet-name>user</servlet-name>
@@ -71,5 +79,15 @@
     <servlet-mapping>
         <servlet-name>multipart</servlet-name>
         <url-pattern>/multipart</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>json</servlet-name>
+        <servlet-class>com.daisongsong.accountbook.servlet.JsonServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>json</servlet-name>
+        <url-pattern>/json</url-pattern>
     </servlet-mapping>
 </web-app>
