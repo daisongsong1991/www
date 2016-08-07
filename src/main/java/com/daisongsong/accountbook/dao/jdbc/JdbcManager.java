@@ -2,7 +2,6 @@ package com.daisongsong.accountbook.dao.jdbc;
 
 import com.daisongsong.accountbook.dao.impl.JdbcUtil;
 
-import javax.swing.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -18,19 +17,19 @@ public class JdbcManager {
     static {
         try {
             Class.forName("com.mysql.jdbc.Driver");
-        }catch (ClassNotFoundException e){
+        } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
     }
 
-    private JdbcManager(){
+    private JdbcManager() {
 
     }
 
-    public static JdbcManager getInstance(){
-        if(sInstance == null){
-            synchronized (JdbcManager.class){
-                if(sInstance == null){
+    public static JdbcManager getInstance() {
+        if (sInstance == null) {
+            synchronized (JdbcManager.class) {
+                if (sInstance == null) {
                     sInstance = new JdbcManager();
                 }
             }
@@ -38,7 +37,7 @@ public class JdbcManager {
         return sInstance;
     }
 
-    public Connection getConnection(){
+    public Connection getConnection() {
         try {
             return DriverManager.getConnection(URL, "root", "123456");
         } catch (SQLException e) {
@@ -47,7 +46,7 @@ public class JdbcManager {
         }
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         JdbcManager instance = JdbcManager.getInstance();
         Connection connection = instance.getConnection();
         System.out.println(connection);

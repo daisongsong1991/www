@@ -74,7 +74,7 @@ public class UserService {
 
         if (!generateSaltedPassword(password, saltInfo.getSalt()).equals(userInfo.getPassword())) {
             return null;
-        }else {
+        } else {
             UserInfo info = UserInfo.copyFrom(userInfo);
             info.setLastLoginTime(System.currentTimeMillis());
             mUserDao.updateUser(info);

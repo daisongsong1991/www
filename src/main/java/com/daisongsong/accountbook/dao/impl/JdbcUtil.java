@@ -9,8 +9,8 @@ import java.sql.Statement;
  */
 public class JdbcUtil {
 
-    public static void close(Statement s, Connection c){
-        if(s != null){
+    public static void close(Statement s, Connection c) {
+        if (s != null) {
             try {
                 s.close();
             } catch (SQLException e) {
@@ -18,7 +18,7 @@ public class JdbcUtil {
             }
         }
 
-        if(c != null){
+        if (c != null) {
             try {
                 c.close();
             } catch (SQLException e) {

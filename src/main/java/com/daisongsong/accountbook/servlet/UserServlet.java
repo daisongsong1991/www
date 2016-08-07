@@ -14,7 +14,7 @@ import java.util.Date;
 /**
  * Created by daisongsong on 16/8/1.
  */
-public class UserServlet extends HttpServlet{
+public class UserServlet extends HttpServlet {
     private static final String PATH_REGISTER = "register";
     private static final String PATH_LOGIN = "login";
 
@@ -24,9 +24,9 @@ public class UserServlet extends HttpServlet{
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (req.getRequestURI().contains(PATH_REGISTER)) {
             doRegister(req, resp);
-        }else if(req.getRequestURI().contains(PATH_LOGIN)){
+        } else if (req.getRequestURI().contains(PATH_LOGIN)) {
             doLogin(req, resp);
-        }else {
+        } else {
 
         }
     }
@@ -37,7 +37,7 @@ public class UserServlet extends HttpServlet{
 
         //检查是否已经登录过了
         UserInfo info = (UserInfo) req.getSession().getAttribute("userInfo");
-        if(info == null || !info.getName().equals(name)){
+        if (info == null || !info.getName().equals(name)) {
             req.getSession().removeAttribute("userInfo");
             info = mUserService.login(name, password);
         }
@@ -59,8 +59,8 @@ public class UserServlet extends HttpServlet{
         String name = req.getParameter("name");
         String password = req.getParameter("password");
         String passwordRepeat = req.getParameter("password_repeat");
-        if(name != null && name.length() >=6 && name.length() <=20
-                && password != null && password.length() >=6 && password.length() <=20
+        if (name != null && name.length() >= 6 && name.length() <= 20
+                && password != null && password.length() >= 6 && password.length() <= 20
                 && password.equals(passwordRepeat)) {
             UserInfo info = new UserInfo();
             info.setName(name);

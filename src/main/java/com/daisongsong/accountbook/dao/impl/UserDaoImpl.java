@@ -80,7 +80,7 @@ public class UserDaoImpl implements UserDao {
             ps = connection.prepareStatement("SELECT * FROM user WHERE name=?");
             ps.setString(1, name);
             ResultSet set = ps.executeQuery();
-            if(set.next()){
+            if (set.next()) {
                 UserInfo info = new UserInfo();
                 info.setId(set.getInt("id"));
                 info.setName(name);
