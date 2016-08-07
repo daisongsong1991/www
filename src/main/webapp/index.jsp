@@ -18,6 +18,6 @@
 </center>
 
 
-    <a href="register_form.jsp">注册</a>|<a href="login_form.jsp">登录</a>
+<a href="register_form.jsp">注册</a>|<a href="login_form.jsp">登录</a>
 </body>
 </html>

@@ -11,7 +11,7 @@
     <title>主页</title>
 </head>
 <body>
-    欢迎${userInfo.name},上次登录时间为${lastLoginTime}
+欢迎${userInfo.name},上次登录时间为${lastLoginTime}
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-package com.daisongsong.accountbook.util;
+package com.daisongsong.www.util;
 
 import java.security.MessageDigest;
 

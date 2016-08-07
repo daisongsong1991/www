@@ -1,4 +1,4 @@
-package com.daisongsong.accountbook.dao.impl;
+package com.daisongsong.www.dao.impl;
 
 import java.sql.Connection;
 import java.sql.SQLException;

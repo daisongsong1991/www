@@ -1,19 +1,19 @@
-package com.daisongsong.accountbook.servlet;
+package com.daisongsong.www.servlet;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.*;
-import java.io.ByteArrayOutputStream;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import java.util.Collection;
 import java.util.Enumeration;
 import java.util.Map;
 
 /**
- * Created by daisongsong on 16/8/7.
+ * Created by daisongsong on 16/8/6.
  */
-public class MultiPartServlet extends HttpServlet {
+public class CookieGetServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -28,20 +28,7 @@ public class MultiPartServlet extends HttpServlet {
 
     private void printParams(PrintWriter writer, HttpServletRequest req) {
         writer.print("\nPARAMS\n");
-
         StringBuffer sb = new StringBuffer();
-
-        try {
-            Collection<Part> parts = req.getParts();
-            for (Part part : parts) {
-                byte[] data = readFromStream(part.getInputStream());
-                System.out.println("MultiPartServlet.printParams " + part.getName() + "=" + new String(data));
-                sb.append(String.format("multipart: %s=[%s]\n", part.getName(), new String(data)));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
         Map<String, String[]> map = req.getParameterMap();
         for (Map.Entry<String, String[]> entry : map.entrySet()) {
             String[] value = entry.getValue();
@@ -53,21 +40,6 @@ public class MultiPartServlet extends HttpServlet {
         }
         System.out.println(sb.toString());
         writer.print(sb.toString());
-    }
-
-    private byte[] readFromStream(InputStream inputStream) {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        byte[] buffer = new byte[1024];
-        try {
-            int size = inputStream.read(buffer);
-            while (size > 0) {
-                baos.write(buffer, 0, size);
-                size = inputStream.read(buffer);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return baos.toByteArray();
     }
 
     private void printCookies(HttpServletRequest req, HttpServletResponse resp) throws IOException {
@@ -97,5 +69,6 @@ public class MultiPartServlet extends HttpServlet {
         }
         writer.write(sb.toString());
     }
+
 
 }

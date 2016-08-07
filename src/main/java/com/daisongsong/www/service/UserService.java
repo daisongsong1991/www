@@ -1,12 +1,12 @@
-package com.daisongsong.accountbook.service;
+package com.daisongsong.www.service;
 
-import com.daisongsong.accountbook.bean.UserInfo;
-import com.daisongsong.accountbook.bean.UserSaltInfo;
-import com.daisongsong.accountbook.dao.UserDao;
-import com.daisongsong.accountbook.dao.UserSaltDao;
-import com.daisongsong.accountbook.dao.impl.UserDaoImpl;
-import com.daisongsong.accountbook.dao.impl.UserSaltDaoImpl;
-import com.daisongsong.accountbook.util.MD5Util;
+import com.daisongsong.www.bean.UserInfo;
+import com.daisongsong.www.bean.UserSaltInfo;
+import com.daisongsong.www.dao.UserDao;
+import com.daisongsong.www.dao.UserSaltDao;
+import com.daisongsong.www.dao.impl.UserDaoImpl;
+import com.daisongsong.www.dao.impl.UserSaltDaoImpl;
+import com.daisongsong.www.util.MD5Util;
 
 import java.util.Locale;
 import java.util.Random;

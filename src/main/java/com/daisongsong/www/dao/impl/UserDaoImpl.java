@@ -1,8 +1,8 @@
-package com.daisongsong.accountbook.dao.impl;
+package com.daisongsong.www.dao.impl;
 
-import com.daisongsong.accountbook.bean.UserInfo;
-import com.daisongsong.accountbook.dao.UserDao;
-import com.daisongsong.accountbook.dao.jdbc.JdbcManager;
+import com.daisongsong.www.bean.UserInfo;
+import com.daisongsong.www.dao.UserDao;
+import com.daisongsong.www.dao.jdbc.JdbcManager;
 
 import java.sql.*;
 import java.util.ArrayList;

@@ -1,4 +1,4 @@
-package com.daisongsong.accountbook.bean;
+package com.daisongsong.www.bean;
 
 /**
  * Created by daisongsong on 16/7/28.

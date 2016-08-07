@@ -10,7 +10,7 @@
 
     <servlet>
         <servlet-name>welcome</servlet-name>
-        <servlet-class>com.daisongsong.accountbook.servlet.HelloServlet</servlet-class>
+        <servlet-class>com.daisongsong.www.servlet.HelloServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>welcome</servlet-name>
@@ -20,7 +20,7 @@
 
     <filter>
         <filter-name>time</filter-name>
-        <filter-class>com.daisongsong.accountbook.filter.TimeFilter</filter-class>
+        <filter-class>com.daisongsong.www.filter.TimeFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>time</filter-name>
@@ -29,7 +29,7 @@
 
     <filter>
         <filter-name>encode</filter-name>
-        <filter-class>com.daisongsong.accountbook.filter.EncodeFilter</filter-class>
+        <filter-class>com.daisongsong.www.filter.EncodeFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>encode</filter-name>
@@ -38,7 +38,7 @@
 
     <servlet>
         <servlet-name>user</servlet-name>
-        <servlet-class>com.daisongsong.accountbook.servlet.UserServlet</servlet-class>
+        <servlet-class>com.daisongsong.www.servlet.UserServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -50,7 +50,7 @@
 
     <servlet>
         <servlet-name>setcookie</servlet-name>
-        <servlet-class>com.daisongsong.accountbook.servlet.CookieSetServlet</servlet-class>
+        <servlet-class>com.daisongsong.www.servlet.CookieSetServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -60,16 +60,16 @@
 
     <servlet>
         <servlet-name>getcookie</servlet-name>
-        <servlet-class>com.daisongsong.accountbook.servlet.CookieGetServlet</servlet-class>
+        <servlet-class>com.daisongsong.www.servlet.CookieGetServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>getcookie</servlet-name>
         <url-pattern>/use_cookie</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>multipart</servlet-name>
-        <servlet-class>com.daisongsong.accountbook.servlet.MultiPartServlet</servlet-class>
+        <servlet-class>com.daisongsong.www.servlet.MultiPartServlet</servlet-class>
         <multipart-config>
             <max-file-size>52428800</max-file-size>
             <max-request-size>52428800</max-request-size>
@@ -80,12 +80,12 @@
         <servlet-name>multipart</servlet-name>
         <url-pattern>/multipart</url-pattern>
     </servlet-mapping>
-    
+
     <servlet>
         <servlet-name>json</servlet-name>
-        <servlet-class>com.daisongsong.accountbook.servlet.JsonServlet</servlet-class>
+        <servlet-class>com.daisongsong.www.servlet.JsonServlet</servlet-class>
     </servlet>
-    
+
     <servlet-mapping>
         <servlet-name>json</servlet-name>
         <url-pattern>/json</url-pattern>

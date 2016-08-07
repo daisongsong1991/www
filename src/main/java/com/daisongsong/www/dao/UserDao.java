@@ -1,6 +1,6 @@
-package com.daisongsong.accountbook.dao;
+package com.daisongsong.www.dao;
 
-import com.daisongsong.accountbook.bean.UserInfo;
+import com.daisongsong.www.bean.UserInfo;
 
 import java.util.List;
 

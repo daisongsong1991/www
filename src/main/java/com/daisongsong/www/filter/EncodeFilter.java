@@ -1,4 +1,4 @@
-package com.daisongsong.accountbook.filter;
+package com.daisongsong.www.filter;
 
 import org.apache.catalina.servlet4preview.http.HttpFilter;
 import org.apache.catalina.servlet4preview.http.HttpServletRequest;
@@ -11,7 +11,7 @@ import java.io.IOException;
 /**
  * Created by daisongsong on 16/8/7.
  */
-public class EncodeFilter extends HttpFilter{
+public class EncodeFilter extends HttpFilter {
 
     @Override
     protected void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain) throws IOException, ServletException {

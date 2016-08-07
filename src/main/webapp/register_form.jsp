@@ -20,13 +20,13 @@
 </head>
 <body>
 
-    <form action="/user/register" method="post">
+<form action="/user/register" method="post">
 
-        用户名 <input name="name" /><br>
-        密 码 <input  name="password" type="password" /><br>
-        重复  <input name="password_repeat" type="password" /><br>
-        <input type="submit" value="提交" onclick="onSubmitClicked()" />
-    </form>
+    用户名 <input name="name"/><br>
+    密 码 <input name="password" type="password"/><br>
+    重复 <input name="password_repeat" type="password"/><br>
+    <input type="submit" value="提交" onclick="onSubmitClicked()"/>
+</form>
 
 </body>
 </html>

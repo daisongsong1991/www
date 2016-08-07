@@ -1,4 +1,4 @@
-package com.daisongsong.accountbook.servlet;
+package com.daisongsong.www.servlet;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

@@ -1,6 +1,6 @@
-package com.daisongsong.accountbook.dao.jdbc;
+package com.daisongsong.www.dao.jdbc;
 
-import com.daisongsong.accountbook.dao.impl.JdbcUtil;
+import com.daisongsong.www.dao.impl.JdbcUtil;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

@@ -1,7 +1,7 @@
-package com.daisongsong.accountbook.servlet;
+package com.daisongsong.www.servlet;
 
-import com.daisongsong.accountbook.bean.UserInfo;
-import com.daisongsong.accountbook.service.UserService;
+import com.daisongsong.www.bean.UserInfo;
+import com.daisongsong.www.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
